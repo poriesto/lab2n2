@@ -18,46 +18,43 @@ import org.omg.CORBA.SystemException;
 
 public class labn2 {
     interface i1{
-        void i1();
+        String name = "Interface1";
+        String i1();
     }
-    public interface  i2 extends i1{
-        void i2();
+    interface i2 extends i1{
+        String name = "Interface2";
+        String i2();
     }
-    private static class A{
-        private String name = "A";
+    static class A{
         public A(){}
-        public String a1(){
-            return name;
-        }
     }
-    private static class B extends A implements i1{
-        private String name = "B";
+    static class B extends A implements i2{
+        String class_name = "B";
+        @Deprecated
+        public String i1(){return name;}
         @Override
-        public void i1(){
-            System.out.println("Name of interface - ");
+        public String i2(){
+            return this.name;
         }
         public String b1(){
-            return name;
+            return this.class_name;
         }
     }
-    abstract class C extends A implements i2{
-        private String name = "C";
+    static class C extends A implements i1{
+        String class_name = "C";
         @Override
-        public void i2(){
-            System.out.println();
+        public String i1(){
+            return this.name;
         }
         public String c1(){
-            return name;
+            return this.class_name;
         }
+
     }
     public static void main(String[] args){
-        A a = new A();
         B b = new B();
-        System.out.println(a.a1() + "\n" + b.b1() + "\n");
-        b.i1();
-        System.out.print("\n");
-        //c.i2();
-        System.out.print("\n");
-        //c.i1();
+        C c = new C();
+        System.out.println("Name of interface: " + b.i2() + " Name of class: " + b.b1());
+        System.out.println("Name of interface: " + c.i1() + " Name of class: " + c.c1());
     }
 }

@@ -70,7 +70,7 @@
       <file leaf-file-name="labn2.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/labn2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="19" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.2867868" vertical-offset="199" max-vertical-offset="871">
+            <state line="37" column="9" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.4442748" vertical-offset="164" max-vertical-offset="832">
               <folding>
                 <element signature="docComment;class#labn2#0" expanded="false" />
               </folding>
@@ -96,9 +96,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="12" />
+    <option name="x" value="2" />
+    <option name="y" value="18" />
     <option name="width" value="1362" />
-    <option name="height" value="740" />
+    <option name="height" value="729" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -338,10 +339,15 @@
       <created>1392374887473</created>
       <updated>1392374887473</updated>
     </task>
+    <task id="LOCAL-00001" summary="try">
+      <created>1392385704921</created>
+      <updated>1392385704921</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="12" width="1362" height="740" extended-state="0" />
+    <frame x="2" y="18" width="1362" height="729" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -361,7 +367,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50073636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -381,6 +387,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="try" />
+    <option name="LAST_COMMIT_MESSAGE" value="try" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -390,6 +398,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/labn2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="19" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="871">
+          <folding>
+            <element signature="docComment;class#labn2#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labn2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="19" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="871">
+          <folding>
+            <element signature="docComment;class#labn2#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/labn2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="35" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="600">
@@ -437,7 +463,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/labn2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.2867868" vertical-offset="199" max-vertical-offset="871">
+        <state line="37" column="9" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.4442748" vertical-offset="164" max-vertical-offset="832">
           <folding>
             <element signature="docComment;class#labn2#0" expanded="false" />
           </folding>
