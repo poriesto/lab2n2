@@ -18,11 +18,11 @@ import org.omg.CORBA.SystemException;
 
 public class labn2 {
     interface i1{
-        String name = "Interface1";
+        String name = "Interface 1";
         String i1();
     }
     interface i2 extends i1{
-        String name = "Interface2";
+        String name = "Interface 2";
         String i2();
     }
     static class A{
