@@ -13,7 +13,8 @@ import org.omg.CORBA.SystemException;
 	Класс С содержит метод с1.
 	Все методы выводят строку с именем своего класса или интерфейса и именем метода.
 	Создать минимальное число объектов для выполнения всех указанных 6 методов.
-	и выполнить все эти методы. */
+	и выполнить все эти методы.
+	 */
 
 public class labn2 {
     public interface i1{
@@ -23,40 +24,19 @@ public class labn2 {
         void i2();
     }
     private static class A{
-        public String name = null;
-        public A(){}
-        public A(String name){
-            this.name = name;
-        }
-        public String a1(){
-            return name;
-        }
+        private String name = null;
     }
     private static class B extends A implements i1{
-        public B(String b1) {
-            this.name = b1;
-        }
-
-        @Deprecated
-        public void i1() {
-            System.out.print("This method from interface 1");
-        }
+        private String name = null;
     }
     private static class C extends A implements i2{
-        @Deprecated
-        public void i2(){
-            System.out.print("bool shit form interface 2");
-        }
-        @Deprecated
-        public void i1(){
-            System.out.print("impliment from interface 1");
-        }
+        private String name = null;
     }
     public static void main(String[] args){
         A a = new A("A1");
         B b = new B("B1");
-        C c = new C();
-        System.out.println(a.a1() + ", " + b.a1());
+        C c = new C("C1");
+        System.out.println(a.a1() + "\n" + b.a1() + "\n" + c.a1());
         b.i1();
         System.out.print("\n");
         c.i2();
