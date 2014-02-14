@@ -17,30 +17,47 @@ import org.omg.CORBA.SystemException;
 	 */
 
 public class labn2 {
-    public interface i1{
+    interface i1{
         void i1();
     }
     public interface  i2 extends i1{
         void i2();
     }
     private static class A{
-        private String name = null;
+        private String name = "A";
+        public A(){}
+        public String a1(){
+            return name;
+        }
     }
     private static class B extends A implements i1{
-        private String name = null;
+        private String name = "B";
+        @Override
+        public void i1(){
+            System.out.println("Name of interface - ");
+        }
+        public String b1(){
+            return name;
+        }
     }
-    private static class C extends A implements i2{
-        private String name = null;
+    abstract class C extends A implements i2{
+        private String name = "C";
+        @Override
+        public void i2(){
+            System.out.println();
+        }
+        public String c1(){
+            return name;
+        }
     }
     public static void main(String[] args){
-        A a = new A("A1");
-        B b = new B("B1");
-        C c = new C("C1");
-        System.out.println(a.a1() + "\n" + b.a1() + "\n" + c.a1());
+        A a = new A();
+        B b = new B();
+        System.out.println(a.a1() + "\n" + b.b1() + "\n");
         b.i1();
         System.out.print("\n");
-        c.i2();
+        //c.i2();
         System.out.print("\n");
-        c.i1();
+        //c.i1();
     }
 }
