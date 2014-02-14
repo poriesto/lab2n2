@@ -1,5 +1,3 @@
-import org.omg.CORBA.SystemException;
-
 /**
  * Created by poriesto on 2/14/14.
  */
@@ -26,7 +24,11 @@ public class labn2 {
         String i2();
     }
     static class A{
+        String class_name = "A";
         public A(){}
+        public String a1(){
+            return this.class_name;
+        }
     }
     static class B extends A implements i2{
         String class_name = "B";
@@ -34,7 +36,7 @@ public class labn2 {
         public String i1(){return name;}
         @Override
         public String i2(){
-            return this.name;
+            return name;
         }
         public String b1(){
             return this.class_name;
@@ -44,7 +46,7 @@ public class labn2 {
         String class_name = "C";
         @Override
         public String i1(){
-            return this.name;
+            return name;
         }
         public String c1(){
             return this.class_name;
@@ -52,8 +54,10 @@ public class labn2 {
 
     }
     public static void main(String[] args){
+        A a = new A();
         B b = new B();
         C c = new C();
+        System.out.println("Name of class: " + a.a1());
         System.out.println("Name of interface: " + b.i2() + " Name of class: " + b.b1());
         System.out.println("Name of interface: " + c.i1() + " Name of class: " + c.c1());
     }
