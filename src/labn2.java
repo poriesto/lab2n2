@@ -34,9 +34,9 @@ public class labn2 {
     }
     static class B extends A implements i2{
         String class_name = "B";
-        @Deprecated
-        public String i1(){return name;}
-        @Override
+        public String i1(){
+            return name;
+        }
         public String i2(){
             return this.name;
         }
@@ -46,7 +46,6 @@ public class labn2 {
     }
     static class C extends A implements i1{
         String class_name = "C";
-        @Override
         public String i1(){
             return this.name;
         }
