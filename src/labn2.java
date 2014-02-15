@@ -26,7 +26,11 @@ public class labn2 {
         String i2();
     }
     static class A{
+        String class_name = "A";
         public A(){}
+        public String a1(){
+            return class_name;
+        }
     }
     static class B extends A implements i2{
         String class_name = "B";
@@ -52,8 +56,10 @@ public class labn2 {
 
     }
     public static void main(String[] args){
+        A a = new A();
         B b = new B();
         C c = new C();
+        System.out.println("Name of interface: " +  " Name of class: " + a.a1());
         System.out.println("Name of interface: " + b.i2() + " Name of class: " + b.b1());
         System.out.println("Name of interface: " + c.i1() + " Name of class: " + c.c1());
     }
