@@ -1,8 +1,5 @@
 /**
  * Created by poriesto on 2/14/14.
- */
-/*
-*
 2. Создать приложение с 3 классами- А, B , С и 2 интерфейсами I1, I2.
 	Класс А является родительским для классов B и С, Интерфейс I1 является родительским для интерфейса I2.
 	Класс В реализует интерфейс I2. Класс С реализует интерфейс I1.
@@ -12,46 +9,57 @@
 	Все методы выводят строку с именем своего класса или интерфейса и именем метода.
 	Создать минимальное число объектов для выполнения всех указанных 6 методов.
 	и выполнить все эти методы.
-	 */
+*/
 interface int1{
     String name = "Interface 1";
     String i1();
 }
 interface int2 extends int1{
-    String name = "Interface 2";
     String i2();
 }
 class A{
-    private String class_name = "A";
-    public A(){}
     public String a1(){
-        return class_name;
+        Class c = this.getClass();
+        return c.getName();
     }
-    /*
-    public i1(int count){
-        return class_name + count
-    }
-    * */
 }
 class B extends A implements int2{
-    private String class_name = "B";
     public String i1(){
-        return name;
+        String str = " ";
+        Class c = B.class;
+        Class[] interfaces = c.getInterfaces();
+        for(Class cInterface : interfaces){
+            str += (cInterface.getName() + " ");
+        }
+        return str;
     }
     public String i2(){
-        return name;
+        String str = " ";
+        Class c = B.class;
+        Class[] interfaces = c.getInterfaces();
+        for(Class cInterface : interfaces){
+            str += (cInterface.getName() + " ");
+        }
+        return str;
     }
     public String b1(){
-        return this.class_name;
+        Class c = this.getClass();
+        return c.getName() + " extends of " + c.getSuperclass();
     }
 }
 class C extends A implements int1{
-    private String class_name = "C";
     public String i1(){
-        return name;
+        Class c = C.class;
+        Class[] interfaces = c.getInterfaces();
+        String str = " ";
+        for(Class cInterface : interfaces){
+            str += (cInterface.getName() + " ");
+        }
+        return str;
     }
     public String c1(){
-        return this.class_name;
+        Class c = this.getClass();
+        return c.getName() + " extends of " + c.getSuperclass();
     }
 }
 
@@ -61,8 +69,8 @@ public class labn2 {
         A a = new A();
         B b = new B();
         C c = new C();
-        System.out.println("Name of interface: " +  " Name of class: " + a.a1());
-        System.out.println("Name of interface: " + b.i2() + " Name of class: " + b.b1());
-        System.out.println("Name of interface: " + c.i1() + " Name of class: " + c.c1());
+        System.out.println("Name of interface: " + " Name of class: " + a.a1());
+        System.out.println("Name of interface:" + b.i2() + " Name of class: " + b.b1());
+        System.out.println("Name of interface:" + c.i1() + " Name of class: " + c.c1());
     }
 }
