@@ -10,11 +10,11 @@
 	Создать минимальное число объектов для выполнения всех указанных 6 методов.
 	и выполнить все эти методы.
 */
-interface int1{
+interface Interface1{
     String name = "Interface 1";
     String i1();
 }
-interface int2 extends int1{
+interface Interface2 extends Interface1{
     String i2();
 }
 class A{
@@ -23,7 +23,7 @@ class A{
         return c.getName();
     }
 }
-class B extends A implements int2{
+class B extends A implements Interface2{
     public String i1(){
         String str = " ";
         Class c = B.class;
@@ -47,7 +47,7 @@ class B extends A implements int2{
         return c.getName() + " extends of " + c.getSuperclass();
     }
 }
-class C extends A implements int1{
+class C extends A implements Interface1{
     public String i1(){
         Class c = C.class;
         Class[] interfaces = c.getInterfaces();
