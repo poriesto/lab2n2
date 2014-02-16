@@ -27,6 +27,11 @@ class A{
     public String a1(){
         return class_name;
     }
+    /*
+    public i1(int count){
+        return class_name + count
+    }
+    * */
 }
 class B extends A implements int2{
     private String class_name = "B";
@@ -48,7 +53,6 @@ class C extends A implements int1{
     public String c1(){
         return this.class_name;
     }
-
 }
 
 public class labn2 {
