@@ -1,5 +1,3 @@
-import org.omg.CORBA.SystemException;
-
 /**
  * Created by poriesto on 2/14/14.
  */
@@ -15,45 +13,46 @@ import org.omg.CORBA.SystemException;
 	Создать минимальное число объектов для выполнения всех указанных 6 методов.
 	и выполнить все эти методы.
 	 */
+interface int1{
+    String name = "Interface 1";
+    String i1();
+}
+interface int2 extends int1{
+    String name = "Interface 2";
+    String i2();
+}
+class A{
+    private String class_name = "A";
+    public A(){}
+    public String a1(){
+        return class_name;
+    }
+}
+class B extends A implements int2{
+    private String class_name = "B";
+    public String i1(){
+        return name;
+    }
+    public String i2(){
+        return name;
+    }
+    public String b1(){
+        return this.class_name;
+    }
+}
+class C extends A implements int1{
+    private String class_name = "C";
+    public String i1(){
+        return name;
+    }
+    public String c1(){
+        return this.class_name;
+    }
+
+}
 
 public class labn2 {
-    interface i1{
-        String name = "Interface 1";
-        String i1();
-    }
-    interface i2 extends i1{
-        String name = "Interface 2";
-        String i2();
-    }
-    static class A{
-        String class_name = "A";
-        public A(){}
-        public String a1(){
-            return class_name;
-        }
-    }
-    static class B extends A implements i2{
-        String class_name = "B";
-        public String i1(){
-            return name;
-        }
-        public String i2(){
-            return this.name;
-        }
-        public String b1(){
-            return this.class_name;
-        }
-    }
-    static class C extends A implements i1{
-        String class_name = "C";
-        public String i1(){
-            return this.name;
-        }
-        public String c1(){
-            return this.class_name;
-        }
 
-    }
     public static void main(String[] args){
         A a = new A();
         B b = new B();
