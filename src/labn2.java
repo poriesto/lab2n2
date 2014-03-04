@@ -14,14 +14,15 @@ import java.lang.reflect.Method;
 */
 interface Interface1{
     String name = "Interface 1";
-    String i1() throws NoSuchMethodException;
+    String i1();
 }
 interface Interface2 extends Interface1{
     String i2();
 }
 class A{
-    public void i1(int itr){
-
+    public String i1(int itr){
+        Class c = this.getClass();
+        return c.getName() + " " + itr;
     }
     public String a1(){
         Class c = this.getClass();
@@ -39,7 +40,6 @@ class B extends A implements Interface2{
     }
     public String i2(){
         String str = " ";
-        String str1 = " ";
 
         for(Class cInterface : interfaces){
             str += (cInterface.getName() + " ");
@@ -73,13 +73,16 @@ class C extends A implements Interface1{
 public class labn2 {
 
     public static void main(String[] args){
-        A a = new A();
+        //A a = new A();
         B b = new B();
         C c = new C();
-        //System.out.println("Name of interface: " + " Name of class: " + a.a1());
-        //System.out.println("Name of interface:" + b.i2() + " Name of class: " + b.b1());
-        //System.out.println("Name of interface:" + c.i1() + " Name of class: " + c.c1());
+        //System.out.println("\nTesting of class A:\n" + "Mehod a1: " + a.a1() + "\nMethod i1: " + a.i1(1998));
         System.out.println("\nTesting of class B:\n" + "Method i1: " + b.i1() + "\nMethod b1: " + b.b1() + "\nMethod i2: " + b.i2());
-        System.out.println("\nTesting of class C:\n" + "Method i1: " + c.i1() + "\nMethod c1: " + c.c1());
+        System.out.println("\nTesting of class C:\n" + "Method i1: " + c.i1() + "\nMethod c1: " + c.c1() + "\n " + c.a1() + "\n " + c.i1(1232));
+        Interface i2;
+        System.out.println("\nTesting of class C:\n" + "Method i1: " + ((C)i2).i1() + "\nMethod c1: " + ((C)i2).c1() + "\n " + ((C)i2).a1() + "\n " + ((C)i2).i1(1232));
+    }
+
+    private static class Interface {
     }
 }
