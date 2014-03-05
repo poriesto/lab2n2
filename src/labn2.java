@@ -30,9 +30,9 @@ class A{
     }
 }
 class B extends A implements Interface2{
-    Class c = B.class;
-    Class[] interfaces = c.getInterfaces();
-    Method[] methods = c.getMethods();
+    final private Class c = B.class;
+    final private Class[] interfaces = c.getInterfaces();
+    final private Method[] methods = c.getMethods();
 
     public String i1(){
         String str = " ";
@@ -53,9 +53,9 @@ class B extends A implements Interface2{
     }
 }
 class C extends A implements Interface1{
-    Class c = C.class;
-    Class[] interfaces = c.getInterfaces();
-    Method[] methods = c.getMethods();
+   final private Class c = C.class;
+    final private Class[] interfaces = c.getInterfaces();
+    final private Method[] methods = c.getMethods();
 
     public String i1(){
         String str = " ";
@@ -73,16 +73,11 @@ class C extends A implements Interface1{
 public class labn2 {
 
     public static void main(String[] args){
-        //A a = new A();
         B b = new B();
         C c = new C();
-        //System.out.println("\nTesting of class A:\n" + "Mehod a1: " + a.a1() + "\nMethod i1: " + a.i1(1998));
         System.out.println("\nTesting of class B:\n" + "Method i1: " + b.i1() + "\nMethod b1: " + b.b1() + "\nMethod i2: " + b.i2());
-        System.out.println("\nTesting of class C:\n" + "Method i1: " + c.i1() + "\nMethod c1: " + c.c1() + "\n " + c.a1() + "\n " + c.i1(1232));
-        Interface i2;
+        System.out.println("\nTesting of class C:\n" + "Method i1: " + c.i1() + "\nMethod c1: " + c.c1() + "\nMethod a1() for class C:  " + c.a1() + "\nMethod i1(int itr) for class C: " + c.i1(1232));
+        B i2 = new B();
         System.out.println("\nTesting of class C:\n" + "Method i1: " + ((C)i2).i1() + "\nMethod c1: " + ((C)i2).c1() + "\n " + ((C)i2).a1() + "\n " + ((C)i2).i1(1232));
-    }
-
-    private static class Interface {
     }
 }
