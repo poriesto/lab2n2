@@ -77,7 +77,7 @@ public class labn2 {
         C c = new C();
         System.out.println("\nTesting of class B:\n" + "Method i1: " + b.i1() + "\nMethod b1: " + b.b1() + "\nMethod i2: " + b.i2());
         System.out.println("\nTesting of class C:\n" + "Method i1: " + c.i1() + "\nMethod c1: " + c.c1() + "\nMethod a1() for class C:  " + c.a1() + "\nMethod i1(int itr) for class C: " + c.i1(1232));
-        B i2 = new B();
-        System.out.println("\nTesting of class C:\n" + "Method i1: " + ((C)i2).i1() + "\nMethod c1: " + ((C)i2).c1() + "\n " + ((C)i2).a1() + "\n " + ((C)i2).i1(1232));
+        A BunderA = new B();
+        System.out.println(((A)BunderA).a1());
     }
 }
